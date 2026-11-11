@@ -1,6 +1,13 @@
 * { box-sizing: border-box; }
 body {
     background-color: #050505;
+    /* Фон вне консоли: фото + затемняющий слой, чтобы текст читался */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url('img/BD.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #d1d1d1;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
@@ -20,13 +27,15 @@ body::after {
 .terminal {
     max-width: 900px;
     width: 100%;
-    background-color: rgba(15,15,15,0.95);
+    background-color: rgba(12, 12, 12, 0.86); /* Полупрозрачное окно: фон слегка просвечивает */
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     border: 1px solid #2a2a2a;
     border-radius: 8px;
-    box-shadow: 0 0 60px rgba(0,255,0,0.05);
+    box-shadow: 0 0 60px rgba(0, 255, 0, 0.05);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: hidden; /* Чтобы шапка не вылезала за скругления */
 }
 .terminal-header {
     background-color: #1a1a1a;
@@ -91,13 +100,14 @@ a:focus-visible, .cmd-input:focus-visible { outline: 1px dashed #ffbd2e; outline
     border-radius: 6px; overflow: hidden; display: flex; flex-direction: column;
 }
 .art-image {
-    width: 100%; height: 250px; object-fit: cover; display: block;
+    width: 100%; height: 320px; object-fit: cover; display: block;
     border-bottom: 1px solid #222; transition: transform 0.3s ease, filter 0.3s ease;
     filter: grayscale(25%) contrast(1.1) sepia(12%);
+    cursor: zoom-in; /* Клик — полноэкранный просмотр картины */
 }
 .image-card:hover .art-image { transform: scale(1.03); filter: none; }
 .img-placeholder {
-    width: 100%; height: 250px; display: flex; flex-direction: column; gap: 8px;
+    width: 100%; height: 320px; display: flex; flex-direction: column; gap: 8px;
     align-items: center; justify-content: center; color: #27c93f;
     background: repeating-linear-gradient(45deg, #0a0a0a 0px, #0a0a0a 12px, #0d120d 12px, #0d120d 24px);
     border-bottom: 1px solid #222; font-size: 0.85rem; text-align: center; padding: 10px;
@@ -119,5 +129,41 @@ a:focus-visible, .cmd-input:focus-visible { outline: 1px dashed #ffbd2e; outline
     .term-dual.title-dual .lang-de, .term-dual.title-dual .lang-ru { font-size: 1.6rem; }
     .term-dual .lang-de { transform: translate(2px, 2px); }
     .image-card { width: 100%; }
-    .art-image, .img-placeholder { height: 200px; }
+    .art-image, .img-placeholder { height: 240px; }
+}
+
+/* =========================================
+   ЛАЙТБОКС: ПОЛНОЭКРАННЫЙ ПРОСМОТР КАРТИН
+   ========================================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
+    padding: 20px;
+    animation: fadeUp 0.2s ease both;
+}
+
+.lightbox img {
+    max-width: 92vw;
+    max-height: 86vh;
+    object-fit: contain;
+    border: 1px solid #333;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.9);
+    filter: none;
+}
+
+.lightbox .lightbox-caption {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #27c93f;
+    font-size: 0.9rem;
+    padding: 0 20px;
 }
