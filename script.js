@@ -59,7 +59,7 @@ function renderStyle(slug) {
     html += '<div class="image-grid">';
     s.works.forEach(function (w) {
         html += '<div class="image-card">' +
-            '<img class="art-image" src="https://deutschesterminal-design.netlify.app/img/' + esc(w.src) + '" alt="' + esc(w.alt) + '" ' +
+            '<img class="art-image" src="img/' + esc(w.src) + '" alt="' + esc(w.alt) + '" ' +
             'onerror="this.outerHTML=\'<div class=&quot;img-placeholder&quot;>[ signal fehlt ]<br>' + esc(w.src) + '</div>\'">' +
             '<span class="image-caption">' + esc(w.caption) + '</span></div>';
     });
