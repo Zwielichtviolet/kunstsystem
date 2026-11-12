@@ -131,6 +131,48 @@ a:focus-visible, .cmd-input:focus-visible { outline: 1px dashed #ffbd2e; outline
     .image-card { width: 100%; }
     .art-image, .img-placeholder { height: 240px; }
 }
+   ТАЙМЛАЙН: СТИЛИ ПО ГОДАМ
+   ========================================= */
+.timeline {
+    margin: 20px 0 30px;
+    padding-left: 10px;
+    border-left: 2px solid rgba(39, 201, 63, 0.35);
+}
+.timeline-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 6px 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.timeline-year {
+    color: #ffbd2e;
+    font-weight: bold;
+    min-width: 52px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+.timeline-line {
+    width: 18px;
+    height: 1px;
+    background: rgba(39, 201, 63, 0.5);
+    align-self: center;
+    flex-shrink: 0;
+}
+.timeline-name { color: #e0e0e0; font-size: 1.05rem; }
+.timeline-name .timeline-de { color: #666; font-size: 0.85rem; }
+.timeline-row:hover .timeline-name { color: #ffbd2e; text-shadow: 0 0 10px rgba(255, 189, 46, 0.4); }
+.timeline-row:hover .timeline-name .timeline-de { color: #888; }
+.timeline-row:hover .timeline-line { background: #ffbd2e; width: 26px; }
+
+@media (max-width: 600px) {
+    .timeline-row { gap: 8px; }
+    .timeline-year { min-width: 44px; font-size: 0.9rem; }
+    .timeline-name { font-size: 0.95rem; }
+    .timeline-name .timeline-de { display: none; }
+}
 
 /* =========================================
    ЛАЙТБОКС: ПОЛНОЭКРАННЫЙ ПРОСМОТР КАРТИН
