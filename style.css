@@ -131,6 +131,7 @@ a:focus-visible, .cmd-input:focus-visible { outline: 1px dashed #ffbd2e; outline
     .image-card { width: 100%; }
     .art-image, .img-placeholder { height: 240px; }
 }
+/* =========================================
    ТАЙМЛАЙН: СТИЛИ ПО ГОДАМ
    ========================================= */
 .timeline {
