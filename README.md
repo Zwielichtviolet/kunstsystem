@@ -2,7 +2,8 @@
 ## Техническая документация проекта
 
 **Проект:** интерактивный справочник изобразительных стилей в эстетике компьютерного терминала.
-**Адрес:** https://n-strar.github.io/kunstsystem/
+**Адрес:** [https://n-strar.github.io/kunstsystem/](https://zwielichtviolet.github.io/kunstsystem/)
+
 **Репозиторий:** https://github.com/N-Strar/kunstsystem
 
 ---
