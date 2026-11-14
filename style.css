@@ -494,12 +494,12 @@ a.term-dual.list-item:hover .lang-ru { color: var(--phosphor-bright); text-shado
         rgba(255, 0, 0, 0) 74%);
     opacity: .2;
 
-    animation:
-        towerBlink
-        var(--blink-duration, 2s)
-        ease-in-out
-        var(--blink-delay, 0s)
-        infinite alternate;
+animation:
+    towerBlink
+    var(--blink-duration, 2s)
+    ease-in-out
+    var(--blink-delay, 0s)
+    infinite alternate;
 
     will-change: opacity, filter;
 }
