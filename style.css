@@ -493,7 +493,14 @@ a.term-dual.list-item:hover .lang-ru { color: var(--phosphor-bright); text-shado
         rgba(255, 18, 18, .12) 48%,
         rgba(255, 0, 0, 0) 74%);
     opacity: .2;
-    animation: towerBlink 2s ease-in-out infinite alternate;
+
+    animation:
+        towerBlink
+        var(--blink-duration, 2s)
+        ease-in-out
+        var(--blink-delay, 0s)
+        infinite alternate;
+
     will-change: opacity, filter;
 }
 @keyframes towerBlink {
