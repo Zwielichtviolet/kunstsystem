@@ -1,0 +1,9 @@
+{
+  "name": "kunstsystem",
+  "version": "4.1.1",
+  "private": true,
+  "description": "Kunstsystem — Рупор искусства",
+  "scripts": {
+    "test": "node scripts/check.js"
+  }
+}
