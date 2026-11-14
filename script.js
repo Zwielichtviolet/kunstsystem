@@ -251,7 +251,7 @@ function renderComments(slug) {
         '<label for="comment-text">' + esc(nickname) + ', ваш комментарий</label>' +
         '<textarea id="comment-text" maxlength="1500" required placeholder="Поделитесь мыслями…"></textarea>' +
         '<button type="submit">ОТПРАВИТЬ КОММЕНТАРИЙ</button></form>' +
-        '<p class="cmd-muted">Публикация станет доступна после настройки Supabase владельцем сайта.</p></section>';
+        '<p class="cmd-muted">Сообщения сохраняются в общей базе Kunstsystem и доступны всем посетителям.</p></section>';
 }
 
 function supabaseReady() {
