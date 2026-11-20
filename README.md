@@ -6,3 +6,4 @@
 - **Публичный сайт:** https://zwielichtviolet.github.io/kunstsystem/
 - **Репозиторий:** https://github.com/Zwielichtviolet/kunstsystem
 - **Лицензия:** MIT
+- **Сайт мотиватор:** https://wallsbreathe.netlify.app/
